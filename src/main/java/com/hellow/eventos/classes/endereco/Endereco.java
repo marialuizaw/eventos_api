@@ -1,6 +1,5 @@
 package com.hellow.eventos.classes.endereco;
 
-
 import com.hellow.eventos.classes.tipo.Tipo;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -15,21 +14,21 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Endereco {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Integer id;
-private String logradouro;
-private String nome;
-private Integer numero;
-private String cep;
-private String bairro;
-private String cidade;
-private String estado;
-private String pais;
-private String complemento;
-@ManyToOne
-private Tipo tipo;
-
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
+    private Integer id_endereco;
+    private String logradouro;
+    private String nome;
+    private Integer numero;
+    private String cep;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String pais;
+    private String complemento;
+    @ManyToOne
+    @JoinColumn(name="id_tipo")
+    private Tipo tipo;
 
 }
