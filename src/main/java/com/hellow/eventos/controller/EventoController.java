@@ -4,12 +4,11 @@ import com.hellow.eventos.classes.endereco.Endereco;
 import com.hellow.eventos.classes.evento.Evento;
 import com.hellow.eventos.classes.evento.EventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RestController
+@RequestMapping(path="Evento")
 public class EventoController {
 
     @Autowired
